@@ -62,3 +62,44 @@
   width:700px;
   height:600px;
 }
+.chef-menu{
+  margin-bottom: 100px;
+}
+.nav-pills>li>a{
+  color:#000;
+}
+.nav{
+  display:inline-flex;
+  float: left;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+  border:none;
+  border-bottom: 2px solid #50e3c2;
+  color:#000;
+  background-color: transparent;
+  font-weight: bold;
+}
+.nav-pills {
+    border: none;
+}
+.content-holder{
+  margin-top: 15px;
+    text-align: left;
+}
+.menu-holder p{
+  color:#000;
+  font-weight:bold;
+  border-bottom:1px solid  #cdcdcd;
+}
+.pad-0{
+  padding-left: 0;
+  padding-right: 0;
+}
+.menu-holder ul{
+  padding-left: 0;
+}
+.menu-holder ul li{
+  list-style: none;
+  padding-bottom: 15px;
+  color: #867f7f;
+}
