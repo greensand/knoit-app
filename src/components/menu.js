@@ -55,6 +55,10 @@ export default class Menu extends Component {
               <li>Oreo Cheese Cake</li>
               <li>Mango Milk Shake</li>
             </ul>
+            <div className="order">
+              <p>Order before</p>
+              <h6>7 PM</h6>
+            </div>
           </Col>
           <Col sm={3} className="pad-0">
             <p>Price</p>
@@ -63,6 +67,10 @@ export default class Menu extends Component {
               <li>150</li>
               <li>180</li>
             </ul>
+            <div className="order">
+              <p>Delivers between</p>
+              <h6>6 PM-7 PM</h6>
+            </div>
           </Col>
           <Col sm={3} className="pad-0">
             <p>Quantity</p>
