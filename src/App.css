@@ -1,3 +1,4 @@
+/*import 'css/editprofile.scss';*/
 .App {
   text-align: center;
 }
@@ -8,17 +9,56 @@
 }
 
 .App-header {
-  background-color: #222;
+  /*background-color: #222;*/
   height: 150px;
   padding: 20px;
-  color: white;
+  color: #000;
 }
-
 .App-intro {
   font-size: large;
 }
-
-@keyframes App-logo-spin {
+/*@keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}*/
+.edit-profile{
+  margin-top: 20px;
+}
+.profile{
+  text-align: left;
+}
+.form-group{
+  margin-bottom: 12px;
+}
+.form-horizontal .control-label{
+  text-align: left;
+  margin-bottom: 10px;
+}
+.form-horizontal .checkbox, .form-horizontal .radio{
+  display: inline-block;
+    padding-left: 15px;
+}
+.btn-default{
+  background-color: #50e3c2;
+    border-color: #50e3c2;
+    color:#fff;
+}
+.btn-default:hover{
+    background-color: #50e3c2;
+    border-color: #50e3c2;
+    color:#fff;
+}
+.btn-default:focus{
+    background-color: #50e3c2;
+    border-color: #50e3c2;
+    color:#fff;
+}
+.btn-default:active{
+    background-color: #50e3c2;
+    border-color: #50e3c2;
+    color:#fff;
+}
+.banner-img img{
+  width:700px;
+  height:600px;
 }
