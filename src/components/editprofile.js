@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form,FormGroup,Col,ControlLabel,FormControl,Checkbox,Button,Grid,Row} from 'react-bootstrap';
-import splashscreen from '../images/splashscreen.png';
+import splashscreen from '../images/bgimage.jpg';
 
 export default class Editprofile extends Component {
   render() {
@@ -9,7 +9,7 @@ export default class Editprofile extends Component {
       <Grid>
       <Row>
        <div className="profile">
-       <Col lg={6} md={6} sm={6} xs={12} >
+       <Col lg={5} md={5} sm={5} xs={12} >
        <h2>Edit Profile</h2>
        <Form horizontal>
          <FormGroup controlId="formHorizontalEmail">
@@ -57,13 +57,13 @@ export default class Editprofile extends Component {
          </FormGroup>
      </Form>
        </Col>
-       </div>
-      <Col lg={6} md={6} sm={6} xs={12} >
+
+      <Col lg={7} md={7} sm={7} xs={12} >
         <div className="banner-img">
             <img src={splashscreen}  alt="splashscreen" />
         </div>
       </Col>
-
+        </div>
       </Row>
 
       </Grid>

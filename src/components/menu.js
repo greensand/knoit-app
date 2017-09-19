@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Col,Tab,Grid,Row,Nav,NavItem} from 'react-bootstrap';
 import profile from '../images/profile.jpg';
 import latha from '../images/latha.jpg';
-
+import splashscreen from '../images/bgimage.jpg';
 
 export default class Menu extends Component {
   constructor(props){
@@ -23,7 +23,7 @@ export default class Menu extends Component {
        <div className="chef">
        <Tab.Container  id="left-tabs-example" defaultActiveKey={this.state.key} onSelect={this.handleSelect}>
     <Row className="clearfix">
-    <Col sm={12}>
+    <Col lg={5} md={5} sm={5} xs={12} className="pad-0">
 
     <Nav bsStyle="pills" >
         <NavItem eventKey="first">
@@ -42,8 +42,8 @@ export default class Menu extends Component {
           ABOUT ME
         </NavItem>
     </Nav>
-      </Col>
-      <Col sm={6}>
+
+      <Col sm={12} className="pad-0">
       <div className="content-holder">
       <Tab.Content animation>
         <Tab.Pane eventKey="first">
@@ -56,10 +56,48 @@ export default class Menu extends Component {
               <h5>Sweet Something</h5>
               <p>5 choco</p>
           </div>
-
+        </div>
+        <div className="chat-menu">
+          <div className="profile-img">
+                <img src={profile} alt="profile" />
+          </div>
+          <div className="chat-description">
+              <h5>Sweet Something</h5>
+              <p>5 choco</p>
+          </div>
+        </div>
+        <div className="chat-menu">
+          <div className="profile-img">
+                <img src={profile} alt="profile" />
+          </div>
+          <div className="chat-description">
+              <h5>Sweet Something</h5>
+              <p>5 choco</p>
+          </div>
+        </div>
+        <div className="chat-menu">
+          <div className="profile-img">
+                <img src={profile} alt="profile" />
+          </div>
+          <div className="chat-description">
+              <h5>Sweet Something</h5>
+              <p>5 choco</p>
+          </div>
         </div>
         <div className="contact-list">
             <h4>CONTACTS</h4>
+            <div className="contact-names">
+                <img src={latha} alt="latha" />
+                <p>Appy</p>
+            </div>
+            <div className="contact-names">
+                <img src={latha} alt="latha" />
+                <p>Nithin</p>
+            </div>
+            <div className="contact-names">
+                <img src={latha} alt="latha" />
+                <p>Latha</p>
+            </div>
             <div className="contact-names">
                 <img src={latha} alt="latha" />
                 <p>Latha</p>
@@ -114,7 +152,13 @@ export default class Menu extends Component {
         </Tab.Pane>
       </Tab.Content>
       </div>
+      </Col>
 
+      </Col>
+      <Col className="pad-0" lg={7} md={7} sm={7} xs={12}>
+      <div className="banner-img">
+          <img src={splashscreen}  alt="splashscreen" />
+      </div>
       </Col>
     </Row>
    </Tab.Container>
