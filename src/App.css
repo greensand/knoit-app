@@ -18,7 +18,61 @@
   font-size: large;
 }
 
+li span
+{
+  line-height: 50px;
+  font-weight:800;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.app-screen
+{
+  min-height: 730px;;
+  overflow-y: scroll;
+  padding:23px;
+  min-height: 100vh;
+
+}
+.app-content
+{
+  padding:20px;
+  margin-top: 20%;
+}
+.form-control
+{
+  border-radius: 0px;
+  border: 1px solid #eeee;
+  box-shadow:none;
+  height:45px;
+}
+.dish-description ul li
+{
+  list-style: none;
+}
+
+.padding0
+{
+  padding:0px;
+}
+.name-content
+{
+  font-weight:800;
+  margin:15px auto;
+}
+@media screen and (max-width:768px) {
+  .app-screen
+  {
+    overflow-x: auto;
+    overflow-y: auto;
+    padding:40px;
+  }
+}
+@media screen and (max-width:768px) and (max-width:1336px) {
+  .app-screen
+  {
+    padding:23px;
+  }
 }
