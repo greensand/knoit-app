@@ -4,7 +4,6 @@ import {KitchenName,KitchenBlock,KitchenWing,KitchenFlatNo} from './kitchen_opti
 import {browserHistory,Link } from 'react-router';
 export default class Kitchen extends Component
 {
-
      constructor()
       {
           super();
