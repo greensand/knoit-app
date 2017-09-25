@@ -4,6 +4,10 @@ import profile from '../images/profile.jpg';
 import latha from '../images/latha.jpg';
 import Addmenu from '../components/addmenu.js'
 import splashscreen from '../images/bgimage.jpg';
+import like from '../images/like.svg';
+import nithin from '../images/nithin.jpg';
+
+
 
 export default class Menu extends Component {
   constructor(props){
@@ -92,7 +96,7 @@ export default class Menu extends Component {
               <h5>Sweet Something</h5>
               <p>5 choco</p>
           </div>
-        </div>
+          </div>
         <div className="contact-list">
             <h4>CONTACTS</h4>
             <div className="contact-names">
@@ -154,7 +158,82 @@ export default class Menu extends Component {
           Bills
         </Tab.Pane>
         <Tab.Pane eventKey="fourth">
-          Reviews
+        <div className="chat-menu">
+          <div className="profile-img">
+                <img src={profile} alt="profile" />
+          </div>
+          <div className="review-content">
+              <div className="review-description">
+                  <h5>Nithin  Kumar</h5>
+                  <p>Apple Crumble</p>
+                  <div className="facebook-icons">
+                    <ul>
+                      <li>Like<span></span></li>
+                      <li>Reply<span></span></li>
+                      <li>  <img src={like} alt="like" />10</li>
+                    </ul>
+                  </div>
+                  <div className="replies">
+                      <p>View 2 previous replies</p>
+                      <div className="profile-img">
+                            <img src={nithin} alt="nithin" />
+                      </div>
+                      <div className="review-content">
+                          <div className="review-description">
+                              <h5>Nithin  Kumar<span> Very true....</span></h5>
+                              <div className="facebook-icons">
+                                <ul>
+                                  <li>Like<span></span></li>
+                                  <li>Reply<span></span></li>
+                                  <li><img src={like} alt="like" />10</li>
+                                </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+          </div>
+          <div className="chat-menu">
+            <div className="profile-img">
+                  <img src={profile} alt="profile" />
+            </div>
+            <div className="review-content">
+                <div className="review-description">
+                    <h5>Nithin  Kumar</h5>
+                    <p>Apple Crumble</p>
+                    <div className="facebook-icons">
+                      <ul>
+                        <li>Like<span></span></li>
+                        <li>Reply<span></span></li>
+                        <li>  <img src={like} alt="like" />10</li>
+                      </ul>
+                    </div>
+                    <div className="replies">
+                        <p>View 2 previous replies</p>
+                        <div className="profile-img">
+                              <img src={nithin} alt="nithin" />
+                        </div>
+                        <div className="review-content">
+                            <div className="review-description">
+                                <h5>Nithin  Kumar<span> Very true....</span></h5>
+                                <div className="facebook-icons">
+                                  <ul>
+                                    <li>Like<span></span></li>
+                                    <li>Reply<span></span></li>
+                                    <li><img src={like} alt="like" />10</li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
         </Tab.Pane>
         <Tab.Pane eventKey="fifth">
           About me
