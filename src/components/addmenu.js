@@ -5,7 +5,9 @@ import latha from '../images/latha.jpg';
 import splashscreen from '../images/bgimage.jpg';
 
 export default class Addmenu extends Component {
-
+  ongraph(){
+    this.props.changeValue("it is from button");
+  }
   render() {
     return (
       <section className="somethings-menu">
@@ -18,12 +20,11 @@ export default class Addmenu extends Component {
                   <FormGroup controlId="formHorizontalEmail">
                     <Col sm={12}>
                       <FormControl type="text" placeholder="Add menu title" />
-
                     </Col>
                   </FormGroup>
                   <FormGroup>
                     <Col sm={12}>
-                      <Button type="submit">
+                      <Button type="submit" onClick={this.ongraph.bind(this)}>
                         Add
                       </Button>
                     </Col>
@@ -36,7 +37,6 @@ export default class Addmenu extends Component {
                <img src={splashscreen}  alt="splashscreen" />
            </div>
            </Col>
-
      </Row>
       </Grid>
       </section>

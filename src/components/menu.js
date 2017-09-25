@@ -2,16 +2,25 @@ import React, { Component } from 'react';
 import { Col,Tab,Grid,Row,Nav,NavItem} from 'react-bootstrap';
 import profile from '../images/profile.jpg';
 import latha from '../images/latha.jpg';
+import Addmenu from '../components/addmenu.js'
 import splashscreen from '../images/bgimage.jpg';
 
 export default class Menu extends Component {
   constructor(props){
     super(props);
     this.state = {
-      key: 'first'
+      key: 'first',
+      initial : 'hai',
     };
     this.handleSelect = this.handleSelect.bind(this);
+     this.changeState = this.changeState.bind(this);
   }
+  changeState(value){
+  this.setState(
+    {initial : value}
+  );
+  console.log(this.state.initial);
+}
    handleSelect(key) {
      this.setState({key:key});
    }

@@ -3,6 +3,7 @@ import { Form,FormGroup,Col,ControlLabel,FormControl,Checkbox,Button,Grid,Row} f
 import splashscreen from '../images/bgimage.jpg';
 
 export default class Editprofile extends Component {
+
   render() {
     return (
       <section className="edit-profile">
