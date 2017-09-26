@@ -292,17 +292,38 @@ margin-bottom: 16px;
   font-weight: normal;
   margin-left: 6px;
 }
-/*.right-inner-addon {
-  position: relative;
+.user{
+  padding:20px 0 40px 0;
+  text-align: left;
+}
+.user img{
+  border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin-right: 16px;
+}
+.user p{
+  display:inline-block;
+  font-weight: bold;
+}
+.call-icon{
+  float: right;
+    margin-top: 20px;
+}
+.call-icon img{
+  width: 20px;
+    height: 20px;
 }
 
-.right-inner-addon input {
-  padding-right: 30px;
+.chat-descri  {
+  text-align: left;
 }
+.chat-descri p{
+  background-color: rgba(204, 204, 204, 0.47);
+  padding: 10px;
+  display: block;
+  width:50%;
+}
+/*.chat-descri span{
 
-.right-inner-addon i {
-  position: absolute;
-  right: 0px;
-  padding: 10px 12px;
-  pointer-events: none;
 }*/
