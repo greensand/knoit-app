@@ -324,6 +324,15 @@ margin-bottom: 16px;
   display: block;
   width:50%;
 }
+.chat-descri img{
+  border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin-right: 16px;
+}
+.chat-user{
+  display: inline-flex;
+}
 /*.chat-descri span{
 
 }*/

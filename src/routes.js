@@ -6,6 +6,7 @@ import Menu from './components/menu.js';
 import Editprofile from './components/editprofile.js';
 import Addmenu from './components/addmenu.js';
 import User_chat from './components/user-chat.js';
+import Something from './components/something.js';
 
 export default (
   <Route path="/" component={App} >
@@ -13,5 +14,7 @@ export default (
     <Route path="/edit" component={Editprofile} />
     <Route path="/addmenu" component={Addmenu} />
     <Route path="/user-chat" component={User_chat} />
+    <Route path="/something" component={Something} />
+
   </Route>
 );
