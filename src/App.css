@@ -243,7 +243,8 @@ margin-bottom: 16px;
   padding:20px;
   border:1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px #ee8311;
+  /*box-shadow: 10px 10px 5px #ee8311;*/
+  box-shadow: 0px 1px 31px 4px #d7d8a0;
 }
 .review-description{
   /*display: inline-block;
@@ -332,7 +333,30 @@ margin-bottom: 16px;
 }
 .chat-user{
   display: inline-flex;
+  float: left;
 }
-/*.chat-descri span{
-
-}*/
+.chat-user p{
+  background-color: #fff;
+  width: auto;
+}
+.back-icon{
+  display: inline-block;
+}
+.back-icon img{
+  width: 30px;
+  height: 30px;
+}
+.food-item{
+  display: inline-block;
+margin-left: 0;
+text-align: left;
+    padding-left: 80px;
+}
+.food-item  img{
+  width: 60%;
+    height: auto;
+}
+.food-item h5{
+  text-align: left;
+  font-weight: bold;
+}
