@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import { Col,Tab,Grid,Row,Nav,NavItem,Form,FormGroup,ControlLabel,FormControl,Button} from 'react-bootstrap';
 import profile from '../images/profile.jpg';
 import latha from '../images/latha.jpg';
@@ -7,7 +8,7 @@ import edit_img from '../images/edit.png';
 import add_img from '../images/add-img.png';
 import cam from '../images/photo-camera.svg';
 
-export default class Addmenu extends Component {
+class Addmenu extends Component {
   ongraph(){
     this.props.changeValue("it is from button");
   }
@@ -31,6 +32,8 @@ export default class Addmenu extends Component {
                 <Col sm={12}>
                   <div className="quantity-holder">
                      <span>Quantity</span>
+                     <button type="button" onClick={()=>{this.props.inc()}} >INC</button>
+                     <button type="button" onClick={()=>{this.props.dec()}} >DEC</button>
                   </div>
                   <div className="menu-holder">
                      <input type="text" className="form-control" placeholder="Add item" />
@@ -38,7 +41,7 @@ export default class Addmenu extends Component {
                          <img src={edit_img} alt="edit-img" />
                          <input type="number" className="form-control" placeholder="Add item" />
                      </div>
-                     <input type="number" className="form-control quantity" placeholder="10" />
+                     <input type="text" onChange={()=>{this.props.inc()}} className="form-control quantity" placeholder="10" value={this.props.x} />
                  </div>
                  <div className="add-item">
                      <img src={add_img} alt="Add-img" />
@@ -81,3 +84,28 @@ export default class Addmenu extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+	return {
+		x:state.x,
+    y:state.y
+	};
+}
+
+function mapDispatchToProps(dispatch){
+  return {
+  inc:() => {
+       dispatch({
+         type:'INC'
+       });
+   },
+   dec:()=>{
+     dispatch({
+       type:'DEC'
+     })
+   }
+ }
+}
+
+Addmenu  = 	connect(mapStateToProps,mapDispatchToProps)(Addmenu);
+export default Addmenu;

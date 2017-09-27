@@ -4,7 +4,7 @@ import user from '../images/user.jpeg';
 import call_icon from '../images/call-icon.png';
 import splashscreen from '../images/bgimage.jpg';
 
-export default class User_chat extends Component {
+export default class UserChat extends Component {
 
   render() {
     return (
