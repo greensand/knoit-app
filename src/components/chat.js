@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Form,FormGroup,Col,ControlLabel,FormControl,Checkbox,Button,Grid,Row} from 'react-bootstrap';
 import profile from '../images/profile.jpg';
 import latha from '../images/latha.jpg';
+import {connect} from 'react-redux';
 
-export default class Chat extends Component {
+class Chat extends Component {
 
   render() {
+    const {x,y} = this.props;
     return (
       <Col sm={12} className="pad-0">
       <div className="chat-menu">
@@ -14,6 +16,7 @@ export default class Chat extends Component {
         </div>
         <div className="chat-description">
             <h5>Sweet Something</h5>
+            {this.props.x}
             <p>5 choco</p>
         </div>
       </div>
@@ -67,3 +70,28 @@ export default class Chat extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+	return {
+		x:state.x,
+    y:state.y
+	};
+}
+
+function mapDispatchToProps(dispatch){
+  return {
+  inc:() => {
+       dispatch({
+         type:'INC'
+       });
+   },
+   dec:()=>{
+     dispatch({
+       type:'DEC'
+     })
+   }
+ }
+}
+
+Chat  = 	connect(mapStateToProps,mapDispatchToProps)(Chat);
+export default Chat;
