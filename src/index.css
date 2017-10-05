@@ -32,7 +32,7 @@ select
 {
   list-style: none;
   float:left;
-  margin-left:25px;
+  margin-left:19px;
   vertical-align: middle;
 
 }
@@ -178,13 +178,17 @@ li span img
   .inside-input
   {
     position: absolute;
-    top: 111px;
+    top: 117px;
     left: 52px;
     font-weight: 700;
   }
-  .verification .verification-item input
+  .verification .verification-item input 
   {
     padding: 6px 12px 6px 52px;
+  }
+  .verification .verification-item .margin-bottom
+  {
+    color:red;
     margin-bottom: 150px;
   }
   .verification .verification-item button

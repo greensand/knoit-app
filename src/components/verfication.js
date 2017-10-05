@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as Bootstrap from 'react-bootstrap';
 import {Link} from 'react-router';
 import {browserHistory } from 'react-router';
+import VerificationForm from './verification_form.js';
 export default class Verfication extends Component
 {
     constructor(props)
@@ -30,12 +31,8 @@ export default class Verfication extends Component
             <Bootstrap.Col className="verification">
             <Bootstrap.Col className="verification-item">
                <p className="labelling">VERIFY YOUR MOBILE NUMBER</p>
-               
-                    
-                <Bootstrap.FormControl type="text" />
-                <span className="inside-input">+91 -</span>
-                   
-                <Bootstrap.Button className="btn-primary button form-control" onClick={this.redirectTo}>SUBMIT</Bootstrap.Button>
+               <VerificationForm/>
+                
             </Bootstrap.Col>
             </Bootstrap.Col>
             </Bootstrap.Col>

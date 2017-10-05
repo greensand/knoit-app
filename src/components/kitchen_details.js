@@ -1,19 +1,52 @@
 import React, { Component } from 'react';
 import * as Bootstrap from 'react-bootstrap';
-import {KitchenName,KitchenBlock,KitchenWing,KitchenFlatNo} from './kitchen_option.js';
+
+import {connect} from 'react-redux';
 import {browserHistory,Link } from 'react-router';
-export default class Kitchen extends Component
+import {fetchKitchenDetails} from '../actions/index';
+class Kitchen extends Component
 {
      constructor()
       {
           super();
           this.redirectTo=this.redirectTo.bind();
       }
+      componentWillMount()
+      {
+          this.props.fetchKitchenDetails();
+      }
       redirectTo()
       {
           browserHistory.push('/find_dishes');
       }
+      
       render(){
+        if(!this.props.kitchen_details)
+            {
+                return <div>No Data yet</div>
+            }
+           const KitchenName = this.props.kitchen_details.map((name)=>{
+                return (
+                    <option value={name.id}>{name.title}</option>
+                )
+            });
+            const KitchenBlock = this.props.kitchen_details.map((name)=>{
+                return (
+                    <option value={name.id}>{name.Block}</option>
+                )
+            });
+            const KitchenWing = this.props.kitchen_details.map((name)=>{
+                return (
+                    <option value={name.id}>{name.Wing}</option>
+                )
+            });
+            const KitchenFlatNo = this.props.kitchen_details.map((name)=>{
+                return (
+                    <option value={name.id}>{name.FlatNo}</option>
+                )
+            });
+               
+        
         return (
                <Bootstrap.Col className="container-fluid">
                         <Bootstrap.Row className="show-grid">
@@ -24,23 +57,36 @@ export default class Kitchen extends Component
                          <Link to = '/option'><Bootstrap.Col  className="back-icon">
                             <img src={require('../images/icons/back-icon.png')}/>
                          </Bootstrap.Col></Link>
+                         <h4 className="knoit_heading">KNOIT</h4>
                         <Bootstrap.Col className="app-content">
                             <form>
                                 <Bootstrap.FormGroup>
                                     <Bootstrap.ControlLabel>Kitchen Name</Bootstrap.ControlLabel>
-                                    <KitchenName/>
+                                    <Bootstrap.FormControl componentClass="select" placeholder="select">
+                                        <option value="">Select Kitchen</option>
+                                        {KitchenName}
+                                        </Bootstrap.FormControl>
                                     </Bootstrap.FormGroup>
                                 <Bootstrap.FormGroup>
                                     <Bootstrap.ControlLabel>Block</Bootstrap.ControlLabel>
-                                    <KitchenBlock/>
+                                    <Bootstrap.FormControl componentClass="select" placeholder="select">
+                                        <option value="">Select Block</option>
+                                        {KitchenBlock}
+                                        </Bootstrap.FormControl>
                                 </Bootstrap.FormGroup>
                                 <Bootstrap.FormGroup>
                                     <Bootstrap.ControlLabel>Wing</Bootstrap.ControlLabel>
-                                    <KitchenWing/>
+                                    <Bootstrap.FormControl componentClass="select" placeholder="select">
+                                        <option value="">Select Wing</option>
+                                        {KitchenWing}
+                                        </Bootstrap.FormControl>
                                 </Bootstrap.FormGroup>
                                     <Bootstrap.FormGroup>
                                     <Bootstrap.ControlLabel>Flat No.</Bootstrap.ControlLabel>
-                                    <KitchenFlatNo/>
+                                    <Bootstrap.FormControl componentClass="select" placeholder="select">
+                                        <option value="">Select Flat No.</option>
+                                        {KitchenFlatNo}
+                                        </Bootstrap.FormControl>
                                 </Bootstrap.FormGroup>
                                 <Bootstrap.FormGroup>
                                     <Bootstrap.Button onClick={this.redirectTo} type="submit"  className="btn-primary form-control">Continue</Bootstrap.Button>
@@ -57,3 +103,8 @@ export default class Kitchen extends Component
         );
     }
 }
+function mapStateToProps(state)
+{
+  return {kitchen_details:state.kitchen_details.all};
+}
+export default connect (mapStateToProps,{fetchKitchenDetails})(Kitchen);
