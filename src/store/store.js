@@ -25,10 +25,19 @@ function y(state = 20, action) {
       return state
   }
 }
+function z(state = "Latha", action) {
+  switch (action.type) {
+    case 'UPDTEDATA':
+      return state+1;
+    default:
+      return state
+  }
+}
 
 const rootReducer = combineReducers({
               x:x,
-              y:y
+              y:y,
+              z:z
 });
 
 const store = createStore(rootReducer, {} , compose(

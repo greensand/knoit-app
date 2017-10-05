@@ -8,9 +8,6 @@ import profile from '../images/profile.jpg';
 import latha from '../images/latha.jpg';
 import splashscreen from '../images/bgimage.jpg';
 
-
-
-
 export default class Menu extends Component {
   constructor(props){
     super(props);

@@ -25,7 +25,7 @@ class Addmenu extends Component {
               <FormGroup controlId="formHorizontalEmail">
                 <Col sm={12}>
                   <div className="edit-holder">
-                     <input type="text" className="form-control" placeholder="Add menu title" />
+                     <input onChange={()=>{this.props.updatedata()}} type="text" className="form-control" placeholder="Add menu title" />
                      <img src={edit_img} alt="edit-img" />
                  </div>
                 </Col>
@@ -39,7 +39,7 @@ class Addmenu extends Component {
                      <input type="text" className="form-control" placeholder="Add item" />
                      <div className="rs-holder">
                          <img src={edit_img} alt="edit-img" />
-                         <input type="number" className="form-control" placeholder="Add item" />
+                         <input type="number" className="form-control" placeholder="" />
                      </div>
                      <input type="text" onChange={()=>{this.props.inc()}} className="form-control quantity" placeholder="10" value={this.props.x} />
                  </div>
@@ -88,7 +88,8 @@ class Addmenu extends Component {
 function mapStateToProps(state) {
 	return {
 		x:state.x,
-    y:state.y
+    y:state.y,
+    z:state.z
 	};
 }
 
@@ -102,6 +103,11 @@ function mapDispatchToProps(dispatch){
    dec:()=>{
      dispatch({
        type:'DEC'
+     })
+   },
+   updatedata:()=>{
+     dispatch({
+       type:'UPDTEDATA'
      })
    }
  }

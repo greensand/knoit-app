@@ -5,7 +5,6 @@ import latha from '../images/latha.jpg';
 import {connect} from 'react-redux';
 
 class Chat extends Component {
-
   render() {
     const {x,y} = this.props;
     return (

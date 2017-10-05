@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Form,FormGroup,Col,ControlLabel,FormControl,Checkbox,Button,Grid,Row} from 'react-bootstrap';
 import profile from '../images/profile.jpg';
 import latha from '../images/latha.jpg';
+import {connect} from 'react-redux';
 
-export default class Chef_menu extends Component {
+class Chef_menu extends Component {
 
   render() {
+    const {z} = this.props;
     return (
       <div className="menu-holder">
         <Col sm={6} className="pad-0">
@@ -14,6 +16,7 @@ export default class Chef_menu extends Component {
             <li>Apple Crumble</li>
             <li>Oreo Cheese Cake</li>
             <li>Mango Milk Shake</li>
+              <li>{this.props.z}</li>
           </ul>
           <div className="order">
             <p>Order before</p>
@@ -44,3 +47,21 @@ export default class Chef_menu extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+	return {
+		z:state.z
+	};
+}
+function mapDispatchToProps(dispatch){
+  return {
+  updatedata:() => {
+       dispatch({
+         type:'UPDTEDATA'
+       });
+    }
+ }
+}
+
+Chef_menu  = 	connect(mapStateToProps,mapDispatchToProps)(Chef_menu);
+export default Chef_menu;
