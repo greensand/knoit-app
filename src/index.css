@@ -173,7 +173,7 @@ li span img
     font-weight: 600;
     margin-bottom: 19px;
     max-width: 249px;
-    margin-left: 20px;
+    margin-left: 56px;
   }
   .inside-input
   {
@@ -182,7 +182,7 @@ li span img
     left: 52px;
     font-weight: 700;
   }
-  .verification .verification-item input 
+  .verification .verification-item input
   {
     padding: 6px 12px 6px 52px;
   }
@@ -190,6 +190,7 @@ li span img
   {
     color:red;
     margin-bottom: 150px;
+    margin-top:5px;
   }
   .verification .verification-item button
   {

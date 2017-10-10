@@ -30,15 +30,15 @@ li span
 }
 .app-screen
 {
-  
+
   overflow-y: scroll;
   padding:23px;
   height: 100vh;
-  
+
 }
 .app-screen::-webkit-scrollbar {
   width: 6px;
-  
+
 }
 
 .app-screen::-webkit-scrollbar-track {
@@ -58,7 +58,7 @@ border-radius:4px;
 .social_Buttons .btn:last-child>span
 {
   margin-left:10px;
-} 
+}
 .form-control
 {
   border-radius: 0px;
@@ -93,4 +93,53 @@ border-radius:4px;
   {
     padding:23px;
   }
+}
+.about-profile-img img
+{
+  height:100px;
+}
+.about-profile-img
+{
+    text-align:center;
+    margin-top: -50px;
+}
+.about-img .about-profile
+{
+  width: 100%;
+  height: 190px;
+}
+.veg-icon
+{
+position: absolute;
+top: 20px;
+left: 35px;
+}
+.name-heading
+{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.small-heading
+{
+   font-weight: bold;
+   margin: 5px 0px 16px;
+}
+.small-paragraph
+{
+    color: rgba(0, 0, 0, 0.44);
+}
+.about-profile-comments
+{
+  margin-top:30px;
+}
+.about-profile-comments .small-heading
+{
+  padding:10px;
+  background-color:#eee;
+}
+.about-comment .media-heading
+{
+  font-size: 14px;
+    font-weight: bold;
 }

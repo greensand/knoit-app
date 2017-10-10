@@ -1,47 +1,56 @@
 import React, { Component } from 'react';
 import * as Bootstrap from 'react-bootstrap';
-
-export const KitchenName = function()
+import {connect} from 'react-redux';
+import {fetchKitchenDetails} from '../actions/index';
+class KitchenName extends Component
 {
-
-        return(
-            <Bootstrap.FormControl componentClass="select" placeholder="select">
-              <option value="select">Salarpuria Greenage</option>
-              <option value="other">...</option>
-            </Bootstrap.FormControl>
-        );
-
+  render()
+  {
+    const KitchenName = this.props.kitchen_details.map((name)=>{
+         return (
+             <option value={name.id}>{name.title}</option>
+         )
+     });
+      return(
+          {KitchenName}
+            );
+  }
 }
-export const KitchenBlock = function()
+function mapStateToProps(state)
 {
-
-        return(
-            <Bootstrap.FormControl componentClass="select" placeholder="select">
-                <option value="select">Oak</option>
-                <option value="other">...</option>
-            </Bootstrap.FormControl>
-        );
-
+  return {kitchen_details:state.kitchen_details.all};
 }
-export const KitchenWing = function()
-{
-
-        return(
-            <Bootstrap.FormControl componentClass="select" placeholder="select">
-                <option value="select">C</option>
-                <option value="other">...</option>
-            </Bootstrap.FormControl>
-        );
-
-}
-export const KitchenFlatNo = function()
-{
-
-        return(
-            <Bootstrap.FormControl componentClass="select" placeholder="select">
-                <option value="select">2004</option>
-                <option value="other">...</option>
-            </Bootstrap.FormControl>
-        );
-
-}
+export default connect (mapStateToProps,{fetchKitchenDetails})(KitchenName);
+// export const KitchenBlock = function()
+// {
+//
+//         return(
+//             <Bootstrap.FormControl componentClass="select" placeholder="select">
+//                 <option value="select">Oak</option>
+//                 <option value="other">...</option>
+//             </Bootstrap.FormControl>
+//         );
+//
+// }
+// export const KitchenWing = function()
+// {
+//
+//         return(
+//             <Bootstrap.FormControl componentClass="select" placeholder="select">
+//                 <option value="select">C</option>
+//                 <option value="other">...</option>
+//             </Bootstrap.FormControl>
+//         );
+//
+// }
+// export const KitchenFlatNo = function()
+// {
+//
+//         return(
+//             <Bootstrap.FormControl componentClass="select" placeholder="select">
+//                 <option value="select">2004</option>
+//                 <option value="other">...</option>
+//             </Bootstrap.FormControl>
+//         );
+//
+// }

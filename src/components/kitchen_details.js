@@ -19,7 +19,7 @@ class Kitchen extends Component
       {
           browserHistory.push('/find_dishes');
       }
-      
+
       render(){
         if(!this.props.kitchen_details)
             {
@@ -45,8 +45,8 @@ class Kitchen extends Component
                     <option value={name.id}>{name.FlatNo}</option>
                 )
             });
-               
-        
+
+
         return (
                <Bootstrap.Col className="container-fluid">
                         <Bootstrap.Row className="show-grid">

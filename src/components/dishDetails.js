@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as Bootstrap from 'react-bootstrap';
 import {Link} from 'react-router';
+import AboutComment from './about-comment.js';
 export default class DishDetails extends Component
 {
   render()
@@ -103,7 +104,66 @@ export default class DishDetails extends Component
                   </Bootstrap.Row>
               </Bootstrap.Col>
             </Bootstrap.Tab.Pane>
+            <Bootstrap.Tab.Pane eventKey="second">
+              <Bootstrap.Col className="chat-content">
+                  <Bootstrap.Row>
+                     <Bootstrap.Col md={2} lg={2} sm={2} >
+                        <Bootstrap.Col className="content-img">
+                         <img className="profile img-circle" src={require('../images/icons/profile.png')}/>
+                        </Bootstrap.Col>
 
+                     </Bootstrap.Col>
+                     <Bootstrap.Col md={10} lg={10} sm={10} >
+                        <Bootstrap.Col className="name-content">
+                         Sweet Somethings
+                        </Bootstrap.Col>
+                        <Bootstrap.Col className="big-image">
+                          <img src={require('../images/food_iamges.jpg')}/>
+                        </Bootstrap.Col>
+                        <Bootstrap.Col className="dish-description">
+                        <h3 className="dish_heading">Todays Special</h3>
+                        <ul className="padding0">
+                            <li>Apple and Blackburry crumble</li>
+                            <li>Apple and Blackburry crumble</li>
+                            <li>Apple and Blackburry crumble</li>
+                            <li>Apple and Blackburry crumble</li>
+                            <li>Apple and Blackburry crumble</li>
+                       </ul>
+                       <p>Order Before 7PM</p>
+
+                        </Bootstrap.Col>
+                        <Bootstrap.Button className="btn-primary form-control">ORDER</Bootstrap.Button>
+
+
+                     </Bootstrap.Col>
+                  </Bootstrap.Row>
+              </Bootstrap.Col>
+            </Bootstrap.Tab.Pane>
+            <Bootstrap.Tab.Pane eventKey="thrid">
+              <Bootstrap.Col className="about-content">
+                  <Bootstrap.Row>
+                     <Bootstrap.Col md={12} lg={12} sm={12} >
+                         <img className="veg-icon" src={require('../images/icons/veg-icon.png')}/>
+                        <Bootstrap.Col className="about-img">
+
+                         <img className="about-profile img-responsive img-rounded" src={require('../images/about-img.jpg')}/>
+                        </Bootstrap.Col>
+                        <Bootstrap.Col className="about-profile-img">
+                         <img className="about-profile img-circle" src={require('../images/icons/profile.png')}/>
+                         <h4 className="name-heading">Sweet Somethings</h4>
+                         <p className="small-heading">Desserts Saurav Alias</p>
+                         <p className="small-paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+                        </Bootstrap.Col>
+                        <Bootstrap.Col className="about-profile-comments">
+                           <h4 className="small-heading">USER COMMENTS</h4>
+                           <AboutComment/>
+                        </Bootstrap.Col>
+                        </Bootstrap.Col>
+
+
+                  </Bootstrap.Row>
+              </Bootstrap.Col>
+            </Bootstrap.Tab.Pane>
           </Bootstrap.Tab.Content>
         </Bootstrap.Col>
         </Bootstrap.Col>
